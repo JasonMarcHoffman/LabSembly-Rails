@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'lab/index'
+  get 'lab/show'
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :labs
+  devise_scope :user do
+    authenticated :user do
+     root 'lab#index', as: :authenticated_root
+    end
+    unauthenticated do
+     root 'devise/sessions#new', as: :unauthenticated_root
+   end
+  end
 end
