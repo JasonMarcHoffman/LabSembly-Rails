@@ -16,7 +16,7 @@ class User < ApplicationRecord
     type == 'Manager'
   end
 
-  def is_admin?
+  def is_super_admin?
     type == 'SuperAdmin'
   end
 end
