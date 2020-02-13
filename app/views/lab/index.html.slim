@@ -1,1 +1,10 @@
+-if current_user.is_normal?
+  h1 Your are Normal
+
+-if current_user.is_manager?
+  h1 Your are Manager
+
+-if current_user.is_super_admin?
+  h1 Your are Super Admin
+
 = button_to 'Log out', destroy_user_session_path, method: :delete
