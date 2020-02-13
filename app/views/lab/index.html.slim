@@ -1,1 +1,10 @@
+-if current_user.is_normal?
+  h1 Normal User and Your lab is #{current_user.lab.name}
+
+-if current_user.is_manager?
+  h1 Manager User and Your lab is #{current_user.lab.name}
+
+-if current_user.is_super_admin?
+  h1 SuperAdmin User and Your lab is #{current_user.lab.name}
+
 = button_to 'Log out', destroy_user_session_path, method: :delete
