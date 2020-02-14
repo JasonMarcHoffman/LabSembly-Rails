@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_085758) do
+ActiveRecord::Schema.define(version: 2020_02_14_080100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "checklist_components", force: :cascade do |t|
+    t.text "name"
+    t.boolean "completed"
+    t.bigint "experiment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["experiment_id"], name: "index_checklist_components_on_experiment_id"
+  end
+
+  create_table "experiments", force: :cascade do |t|
+    t.string "name"
+    t.string "state"
+    t.text "comment"
+    t.bigint "lab_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lab_id"], name: "index_experiments_on_lab_id"
+  end
 
   create_table "labs", force: :cascade do |t|
     t.string "name"
@@ -39,5 +58,7 @@ ActiveRecord::Schema.define(version: 2020_02_13_085758) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "checklist_components", "experiments"
+  add_foreign_key "experiments", "labs"
   add_foreign_key "users", "labs"
 end
