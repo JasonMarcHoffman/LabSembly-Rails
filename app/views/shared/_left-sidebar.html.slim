@@ -1,0 +1,133 @@
+-if current_user.is_normal?
+  /! ========== Left Sidebar Start ==========
+  .left-side-menu
+    #left-side-menu-container.h-100 data-simplebar="" 
+      /! LOGO
+      a.logo.text-center href="index.html" 
+        span.logo-lg
+          img#side-main-logo alt="" height="auto" src="../../assets/images/SignInLogo.png" /
+        span.logo-sm
+          img#side-sm-main-logo alt="" height="16" src="assets/images/logo_sm.png" /
+      /! - Sidemenu
+      ul.metismenu.side-nav
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span.badge.badge-success.float-right 4
+            span Profile
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Dashboard
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Experiments
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Inventory
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Contact
+
+      /! Help Box
+      .help-box.text-white.text-center
+        a.float-right.close-btn.text-white href=("javascript: void(0);") 
+          i.mdi.mdi-close
+        img alt=("Helper Icon Image") height="90" src="assets/images/help-icon.svg" /
+        h5.mt-3 Unlimited Access
+        p.mb-3 Upgrade to plan to get access to unlimited reports
+        a.btn.btn-outline-light.btn-sm href=("javascript: void(0);")  Upgrade
+      /! end Help Box
+      /! End Sidebar
+      .clearfix
+    /! Sidebar -left
+  /! Left Sidebar End
+
+-if current_user.is_manager?
+  /! ========== Left Sidebar Start ==========
+  .left-side-menu
+    #left-side-menu-container.h-100 data-simplebar="" 
+      /! LOGO
+      a.logo.text-center href="index.html" 
+        span.logo-lg
+          img#side-main-logo alt="" src="../../assets/images/SignInLogo.png" /
+        span.logo-sm
+          img#side-sm-main-logo alt="" height="16" src="assets/images/logo_sm.png" /
+      /! - Sidemenu
+      ul.metismenu.side-nav
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span.badge.badge-success.float-right 4
+            span Dashboard
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Task Manager
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Inventory Manager
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Suppliers
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Staff
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span Settings
+
+      /! Help Box
+      .help-box.text-white.text-center
+        a.float-right.close-btn.text-white href=("javascript: void(0);") 
+          i.mdi.mdi-close
+        img alt=("Helper Icon Image") height="90" src="assets/images/help-icon.svg" /
+        h5.mt-3 Unlimited Access
+        p.mb-3 Upgrade to plan to get access to unlimited reports
+        a.btn.btn-outline-light.btn-sm href=("javascript: void(0);")  Upgrade
+      /! end Help Box
+      /! End Sidebar
+      .clearfix
+    /! Sidebar -left
+  /! Left Sidebar End
+
+-if current_user.is_super_admin?
+  /! ========== Left Sidebar Start ==========
+  .left-side-menu
+    #left-side-menu-container.h-100 data-simplebar="" 
+      /! LOGO
+      a.logo.text-center href="index.html" 
+        span.logo-lg
+          img#side-main-logo alt="" height="auto" src="../../assets/images/SignInLogo.png" /
+        span.logo-sm
+          img#side-sm-main-logo alt="" height="16" src="assets/images/logo_sm.png" /
+      /! - Sidemenu
+      ul.metismenu.side-nav
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span.badge.badge-success.float-right 4
+            span super
+            
+        li.side-nav-item
+          a.side-nav-link href=("javascript: void(0);") 
+            i.uil-home-alt
+            span super
+
+  /! Left Sidebar End

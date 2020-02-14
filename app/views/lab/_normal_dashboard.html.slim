@@ -1,1 +1,36 @@
-h1 Normal Dashboard
+/ h1 Manager Dashboard
+.wrapper
+  = render "/shared/left-sidebar"
+  /! ==============================================================
+  /! Start Page Content here
+  /! ==============================================================
+  .content-page
+    .content
+      = render "/shared/topbar"
+      /! Start Content
+      .container-fluid
+        /! start page title
+        .row
+          .col-12
+            .page-title-box
+              .page-title-right
+                ol.breadcrumb.m-0
+                  li.breadcrumb-item
+                    a href=("javascript: void(0);")  LabSembly
+                  li.breadcrumb-item
+                    a href=("javascript: void(0);")  Pages
+                  li.breadcrumb-item.active Dashboard
+              h4.page-title User Dashboard
+        /! end page title
+      /! container
+    /! content
+    = render "/shared/footer"
+  /! ==============================================================
+  /! End Page content
+  /! ==============================================================
+/! END wrapper
+= render "/shared/right-sidebar"
+/! bundle
+script src="assets/js/vendor.min.js" 
+script src="assets/js/app.min.js" 
+
