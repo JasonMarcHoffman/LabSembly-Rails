@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'lab/index'
-  get 'lab/show'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :labs
+  resources :checklist_components
+  resources :experiments
+
   devise_scope :user do
     authenticated :user do
      root 'lab#index', as: :authenticated_root
