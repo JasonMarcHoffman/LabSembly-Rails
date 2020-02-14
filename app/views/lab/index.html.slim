@@ -1,11 +1,64 @@
 -if current_user.is_normal?
   h1 Normal User and Your lab is #{current_user.lab.name}
+  = render "normal_dashboard"
 
 -if current_user.is_manager?
   h1 Manager User and Your lab is #{current_user.lab.name}
+  
+  = render "manager_dashboard"
 
 -if current_user.is_super_admin?
   h1 SuperAdmin User and Your lab is #{current_user.lab.name}
+  = render "super_admin_dashboard"
 
 = button_to 'Log out', destroy_user_session_path, method: :delete
 = button_to 'Experiments', experiments_path, method: :get
+
+/ -if current_user.is_normal?
+/   h1 Normal User and Your lab is #{current_user.lab.name}
+
+/ -if current_user.is_manager?
+/   .wrapper
+/     = render "shared/left-sidebar"
+/   /! ==============================================================
+/   /! Start Page Content here
+/   /! ==============================================================
+/   .content-page
+/     .content
+/       = render "shared/topbar"
+/       / | @@include('./partials/topbar.html')
+/       /! Start Content
+/       .container-fluid
+/         /! start page title
+/         .row
+/           .col-12
+/             .page-title-box
+/               .page-title-right
+/                 ol.breadcrumb.m-0
+/                   li.breadcrumb-item
+/                     a href=("javascript: void(0);")  Hyper
+/                   li.breadcrumb-item
+/                     a href=("javascript: void(0);")  Pages
+/                   li.breadcrumb-item.active Starter
+/               h4.page-title Starter
+/         /! end page title
+/       /! container
+/     /! content
+/     = render "shared/footer"
+/     / | @@include('./partials/footer.html')
+/   /! ==============================================================
+/   /! End Page content
+/   /! ==============================================================
+/ /! END wrapper
+/ / | @@include('./partials/right-sidebar.html')
+/ /! bundle
+/ script src="assets/js/vendor.min.js" 
+/ script src="assets/js/app.min.js" 
+
+/   / h1 Manager User and Your lab is #{current_user.lab.name}
+
+/ -if current_user.is_super_admin?
+/   h1 SuperAdmin User and Your lab is #{current_user.lab.name}
+
+/ = button_to 'Log out', destroy_user_session_path, method: :delete
+/ = button_to 'Experiments', experiments_path, method: :get
