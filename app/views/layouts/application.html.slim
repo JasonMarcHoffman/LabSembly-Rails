@@ -1,16 +1,39 @@
+/ doctype html
+/ html
+/   head
+/     title LabSembly | Laboratory Management Tool
+/     link href="#{image_url('favicon.ico')}" rel=("shortcut icon")
+/     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+/     meta content="width=device-width, initial-scale=1.0" name="viewport"
+/     meta content="Laboratory Management Tool"
+/     meta content="LabSembly" name="LabSembly"
+/     meta content="IE=edge" http-equiv="X-UA-Compatible"
+/     = csrf_meta_tags
+/     = csp_meta_tag
+/     / = stylesheet_pack_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+/     / = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+/     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+/     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+/     / = javascript_pack_tag 'application'
+/     / = stylesheet_pack_tag 'application'
+/   body
+/     = yield
+
 doctype html
 html
   head
-    title LabSembly | Laboratory Management Tool
-    link href="#{image_url('favicon.ico')}" rel=("shortcut icon")
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
-    meta content="width=device-width, initial-scale=1.0" name="viewport"
-    meta content="Laboratory Management Tool"
-    meta content="LabSembly" name="LabSembly"
-    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    meta charset="utf-8" /
+    title Hyper - Responsive Bootstrap 4 Admin Dashboard
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    meta content="Coderthemes" name="author" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    link href="#{image_url('favicon.ico')}" rel=("shortcut icon") /
     = csrf_meta_tags
     = csp_meta_tag
+    = stylesheet_link_tag    'icons', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    = javascript_include_tag 'vendor', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+

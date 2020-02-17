@@ -24,13 +24,15 @@
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "js-yaml": ">=3.13.1",
     "lodash": "^4.17.11",
     "sass-lint": "^1.13.1",
     "tar": ">=4.4.8",
-    "js-yaml": ">=3.13.1"
+    "webpack-dev-server": "2.11.2"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
+    "@rails/webpacker": "3.5",
     "admin-resources": "git+https://github.com/coderthemes/admin-resources.git#master",
     "apexcharts": "^3.6.9",
     "blueimp-file-upload": "^9.30.0",

@@ -7,11 +7,12 @@ File: Main Css File
 */
 
 //Core files
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "config/modern/variables";
-@import "config/modern/custom-variables";
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "config/saas/variables-dark";
+@import "config/saas/custom-variables-dark";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 
 // Structure
 @import "custom/structure/general";
