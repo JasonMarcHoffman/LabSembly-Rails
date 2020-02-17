@@ -1,10 +1,10 @@
 -if current_user.is_normal?
-  h1 Normal User and Your lab is #{current_user.lab.name}
+  = render "user_dashboard"
 
 -if current_user.is_manager?
-  h1 Manager User and Your lab is #{current_user.lab.name}
+  = render "manager_dashboard"
 
 -if current_user.is_super_admin?
-  h1 SuperAdmin User and Your lab is #{current_user.lab.name}
+  = render "admin_dashboard"
 
-= button_to 'Log out', destroy_user_session_path, method: :delete
+= button_to 'Edit User', edit_user_registration_path(current_user), method: :get
