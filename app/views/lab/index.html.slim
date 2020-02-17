@@ -8,3 +8,4 @@
   = render "admin_dashboard"
 
 = button_to 'Edit User', edit_user_registration_path(current_user), method: :get
+= button_to 'Log out', destroy_user_session_path, method: :delete
