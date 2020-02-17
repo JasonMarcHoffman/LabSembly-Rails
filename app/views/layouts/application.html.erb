@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LabSembly | Laboratory Management Tool</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'icons', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <%= render 'partials/left-sidebar.html'%>
+    <div class="content-page">
+      <div class="content">
+        <%= render 'partials/topbar.html'%>
+        <%= yield %>
+      </div>
+      <%= render 'partials/footer.html'%>
+    </div>
+  </div>
+
+  <%= render 'partials/right-sidebar.html'%>
+
+  <%= javascript_include_tag 'vendor', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
+
 </html>

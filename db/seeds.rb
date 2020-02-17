@@ -9,9 +9,9 @@ Lab.create(name: "First Lab", location: "braam")
 Lab.create(name: "Second Lab", location: "Sandton")
 Lab.create(name: "Third Lab", location: "Morning Side")
 
-User.create(first_name: "SuperAdmin", last_name: "User", type: "SuperAdmin", lab_id: 1, email: "superadmin@User.com", password: "123123")
-User.create(first_name: "Manager", last_name: "User", type: "Manager", lab_id: 2, email: "Manager@User.com", password: "123123")
-User.create(first_name: "Normal", last_name: "User", type: "Normal", lab_id: 3, email: "Normal@User.com", password: "123123")
+User.create(first_name: "Admin", last_name: "User", type: "SuperAdmin", lab_id: 1, email: "admin@mail.com", password: "123123")
+User.create(first_name: "Manager", last_name: "User", type: "Manager", lab_id: 2, email: "manager@mail.com", password: "123123")
+User.create(first_name: "User", last_name: "User", type: "Normal", lab_id: 3, email: "user@mail.com", password: "123123")
 
 Experiment.create(name: "First Experiment", state: "Assigned", comment: "This is for First lab", lab_id: 1)
 Experiment.create(name: "Second Experiment", state: "Completed", comment: "This is for First lab", lab_id: 1)
