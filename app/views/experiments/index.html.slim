@@ -1,0 +1,5 @@
+h1
+  - @experiments.each do |exp|
+    =>link_to exp.name, checklist_components_path(:experiment_id => exp.id)
+    = ": #{exp.state}"
+    br
